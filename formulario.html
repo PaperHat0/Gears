@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Agendamento - Mecânica Gears</title>
+  <link rel="stylesheet" href="form.css">
+
+</head> 
+<body>
+
+  <!-- Header -->
+  <div class="navbar">
+    <div class="logo">
+      <img src="Logo Gears.png" alt="Logo"> 
+    </div>
+    <div class="menu">
+      <a href="#">
+        <button class="btn" onclick="window.location.href = 'Peças.html'">Peças</button>
+      </a>
+      <a href="#" >
+        <button class="btn" onclick="window.location.href = 'serviços.html'">Serviços</button>
+      </a>
+       <button class="btn">Agendamento</button>
+    </div>
+  </div>
+
+  <!-- Formulário -->
+  <div class="container">
+    <h2>Agende seu Serviço</h2>
+    <form>
+      <label for="nome">Nome Completo</label>
+      <input type="text" id="nome" name="nome" required>
+
+      <label for="telefone">Telefone</label>
+      <input type="tel" id="telefone" name="telefone" required>
+
+      <label for="email">E-mail</label>
+      <input type="email" id="email" name="email">
+
+      <label for="data">Data do Agendamento</label>
+      <input type="date" id="data" name="data" required>
+
+      <label for="hora">Horário</label>
+      <input type="time" id="hora" name="hora" required>
+
+      <label for="servico">Serviço</label>
+      <select id="servico" name="servico" required>
+        <option value="">Selecione</option>
+        <option value="troca-oleo">Troca de Óleo</option>
+        <option value="revisao">Revisão</option>
+        <option value="freios">Freios</option>
+        <option value="suspensao">Suspensão</option>
+        <option value="alinh_balan">Alinhamento e Balanceamento</option>
+      </select>
+
+      <label for="detalhes">Detalhes Adicionais</label>
+      <textarea id="detalhes" name="detalhes" rows="3"></textarea>
+
+      <button type="submit" class="agend">Agendar</button>
+    </form>
+  </div>
+
+ <footer class="footer">
+            <address>
+                Site criado para a avaliação de 2CAW. João Pedro Barbosa Lima, Leonardo Costa Cutrim, Isaque da Silva Souto, Gabriel Mil Homens Brandão de Moraes
+            </address>
+        </footer>
+
+</body>
+</html>

@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="Estilo.css" rel="stylesheet" type="text/css"/>    
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function abrirOverlay() {
+            document.getElementById('meuOverlay').style.display = 'flex'; // Mude para 'block' ou 'flex' dependendo do seu layout
+        }
+
+        function fecharOverlay() {
+            document.getElementById('meuOverlay').style.display = 'none';
+        }
+
+// Para fechar ao clicar fora do conteúdo:
+        document.getElementById('meuOverlay').addEventListener('click', function(event) {
+            if (event.target === this) { // Se o clique foi no próprio overlay e não no conteúdo
+                fecharOverlay();
+            }
+            function Pegar(){
+                let nome = document.getElementById("nome"),
+                    telefone = document.getElementById("telefone"),
+                    ncartao = document.getElementById("cartão"),
+                    tipagamento = document.getElementById("pagamento"),
+                    data = document.getElementById("data"),
+                    hora = document.getElementById("hora");
+          
+                if (nome.value.trim()==""){
+                    alert("O nome é obrigatório.");
+                    return false;
+                }
+
+
+                if (telefone.value.trim()==""){
+                    alert("O telefone é obrigatório.");
+                    return false;
+                }
+
+
+                if (ncartao.value.trim()==""){
+                    alert("O numero do cartão é obrigatório");
+                    return false;
+                }
+
+
+                if (tipagamento.value.trim()==""){
+                    alert("Selecione um tipo de pagamento.");
+                    return false;
+                }
+                if(data.value.trim()==""){
+                    alert("Selecione a data de entrega.");
+                    return false;
+                }
+                if(hora.value.trim()==""){
+                    alert("Selecione o horario de entrega.");
+                    return false;
+                }
+                fecharOverlay();
+                return true;
+            }
+    });
+    </script>    
+    <div class="container"></div>
+        <header class="header">
+            <img src="TrueLogoGears.png" class="Logo">
+
+            <button>Peças</button>
+            <a href="#" >
+                <button class="btn" onclick="window.location.href = 'serviços.html'">Serviços</button>
+            </a>
+            <a href="#" >
+                <button class="btn" onclick="window.location.href = 'formulario.html'">Agendamento</button>
+            </a>
+        </header>
+
+        <h1><center>Os melhores produtos estão aqui!!!</center></h1>
+            <div class="carrossel">
+                <div class="fotos">
+                    <img src="https://images.tcdn.com.br/img/img_prod/1089461/jogo_rodas_audi_a1_aro_17_original_com_pneu_semi_novas_1069_2_374e19b664fda8082596ab58ed6e3333.jpeg" alt="Rodas Audi">
+                    <img src="https://www.premiershop.com.br/media/catalog/product/cache/a52c95f6355d037509db159936dc104a/1/_/1_39_21.jpg" alt="Alarme Automotivo Positron">
+                    <img src="https://liderautoacessorios.com.br/wp-content/uploads/2019/11/tapete-automotivos-02.jpg" alt="Tapete Automotivos">
+                    <img src="https://cornelio-maverick-produtos.s3.amazonaws.com/loja/imagens/full/tigerpalheta1.png" alt="Limpador de Parabrisa">
+                    <img src="https://images.tcdn.com.br/img/img_prod/1089461/jogo_rodas_audi_a1_aro_17_original_com_pneu_semi_novas_1069_2_374e19b664fda8082596ab58ed6e3333.jpeg" alt="Rodas Audi">
+                </div>
+            </div>
+            <div class="compras">
+                <div class="secao">
+                    <h1><center>Acessorios</center></h1>
+                    <div class="Card"> 
+                        <div class="produto">
+                            <div class="imagem">
+                                <img class="produto-imagem" src="https://cornelio-maverick-produtos.s3.amazonaws.com/loja/imagens/full/tigerpalheta1.png" alt="Limpador de Parabrisa">
+                            </div>
+                            <div class="Titulo">
+                                Limpador de Parabrisa
+                            </div>
+                            <div class="detalhe">
+                                <p>Preço: <span>$50,00</span></p>
+                                <a href="#" onclick="abrirOverlay()">Comprar</a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="Card"> 
+                        <div class="produto">
+                            <div class="imagem">
+                                <img class="produto-imagem" src="https://www.premiershop.com.br/media/catalog/product/cache/a52c95f6355d037509db159936dc104a/1/_/1_39_21.jpg" alt="Alarme Positron">
+                            </div>
+                            <div class="Titulo">
+                                Alarme Positron
+                            </div>
+                            <div class="detalhe">
+                                <p>Preço: <span>$100,00</span></p>
+                                <a href="#" onclick="abrirOverlay()">Comprar</a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="Card"> 
+                        <div class="produto">
+                            <div class="imagem">
+                                <img class="produto-imagem" src="https://liderautoacessorios.com.br/wp-content/uploads/2019/11/tapete-automotivos-02.jpg" alt="Tapete Automotivo">
+                            </div>
+                            <div class="Titulo">
+                                Tapete Automotivo
+                            </div>
+                            <div class="detalhe">
+                                <p>Preço: <span>$25,00</span></p>
+                                <a href="#" onclick="abrirOverlay()">Comprar</a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="Card"> 
+                        <div class="produto">
+                            <div class="imagem">
+                                <img class="produto-imagem" src="https://a-static.mlcdn.com.br/186x140/suporte-celular-difusor-de-ar-veicular-automotivo-carro-master/clicelleletronicos/8509637786/0db20155ca66a68f04e2578c845be580.jpeg" alt="Suporte Master">
+                            </div>
+                            <div class="Titulo">
+                                Suporte Master
+                            </div>
+                            <div class="detalhe">
+                                <p>Preço: <span>$55,00</span></p>
+                                <a href="#" onclick="abrirOverlay()">Comprar</a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="secao">
+                    <h1><center>Rodas</center></h1> 
+                    <div class="Card"> 
+                        <div class="produto">
+                            <div class="imagem">
+                                <img class="produto-imagem" src="https://www.fullpneus.com.br/wp-content/uploads/2024/01/pneu-roadx-rxmotion.jpg" alt="Pneus ROADX">
+                            </div>
+                            <div class="Titulo">
+                                Pneus ROADX
+                            </div>
+                            <div class="detalhe">
+                                <p>Preço: <span>$150,00</span></p>
+                                <a href="#" onclick="abrirOverlay()">Comprar</a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="Card"> 
+                        <div class="produto">
+                            <div class="imagem">
+                                <img class="produto-imagem" src="https://images.tcdn.com.br/img/img_prod/1089461/jogo_rodas_audi_a1_aro_17_original_com_pneu_semi_novas_1069_2_374e19b664fda8082596ab58ed6e3333.jpeg" alt="Pneus Audi">
+                            </div>
+                            <div class="Titulo">
+                                Pneus Audi
+                            </div>
+                            <div class="detalhe">
+                                <p>Preço: <span>$160,00</span></p>
+                                <a href="#" onclick="abrirOverlay()">Comprar</a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="Card"> 
+                        <div class="produto">
+                            <div class="imagem">
+                                <img class="produto-imagem" src="https://images.tcdn.com.br/img/img_prod/1063462/pneu_aro_14_pirelli_175_65_r14_82h_p400_evo_5154_1_4735476cbc403c7c694287672cf9dc8c.png" alt="Pneus Pirelli">
+                            </div>
+                            <div class="Titulo">
+                                Pneus Pirelli
+                            </div>
+                            <div class="detalhe">
+                                <p>Preço: <span>$140,00</span></p>
+                                <a href="#" onclick="abrirOverlay()">Comprar</a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="Card"> 
+                        <div class="produto">
+                            <div class="imagem">
+                                <img class="produto-imagem" src="https://www.veluplast.com.br/wp-content/uploads/2019/09/01-eagle-sport.png" alt="Pneus Goodyear">
+                            </div>
+                            <div class="Titulo">
+                                Pneus Goodyear
+                            </div>
+                            <div class="detalhe">
+                                <p>Preço: <span>$80,00</span></p>
+                                <a href="#" onclick="abrirOverlay()">Comprar</a>
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+                <div class="secao">
+                    <h1><center>Peças de Motor</center></h1> 
+                    <div class="Card"> 
+                        <div class="produto">
+                            <div class="imagem">
+                                <img class="produto-imagem" src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTFsRv_oshkbH7O54U0KukLAgP-lGwqB1vLrZDPZ3yt9A8C9X3HsPqmEoeDnx9VTqNKDgcdHH8yicXJeVv6AfpovdinRBqpPBDIT63b5Pvk5uHVPJY4XAEBDQ" alt="Bloco de Cárter">
+                            </div>
+                            <div class="Titulo">
+                                Bloco de Cárter
+                            </div>
+                            <div class="detalhe">
+                                <p>Preço: <span>$100,00</span></p>
+                                <a href="#" onclick="abrirOverlay()">Comprar</a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="Card"> 
+                        <div class="produto">
+                            <div class="imagem">
+                                <img class="produto-imagem" src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSiYbXhL2CrT8JJK2u0qC3Q0mrg0MMleAkmQSNYPC68mELUcs2KF5cUEqyq_flb4jEVXU8mjwfQ6aZI9tv-394EX1ZglMh1dBGn7nNn8etkYuISjU-958AVKA" alt="Virabrequim">
+                            </div>
+                            <div class="Titulo">
+                                Virabrequim
+                            </div>
+                            <div class="detalhe">
+                                <p>Preço: <span>$70,00</span></p>
+                                <a href="#" onclick="abrirOverlay()">Comprar</a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="Card"> 
+                        <div class="produto">
+                            <div class="imagem">
+                                <img class="produto-imagem" src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTM7wycFfvQxo8vvF7BntivPzxYnLse_BnEUUs3XVketWHn3GXAIPe7VLF2zHvIyC3AHJRslwB9Qs-Ehp4v9lZKWGg3u1PTmHbQqEGUjNlBIXkTdpVGkJjwvsYY" alt="Pistão Std">
+                            </div>
+                            <div class="Titulo">
+                                Pistão Std
+                            </div>
+                            <div class="detalhe">
+                                <p>Preço: <span>$75,00</span></p>
+                                <a href="#" onclick="abrirOverlay()">Comprar</a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="Card"> 
+                        <div class="produto">
+                            <div class="imagem">
+                                <img class="produto-imagem" src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRKRkyE2Rg9JQnk8I5G33fUFu9m-zbd3qpVHHqe77mj8zI-Sp9sYZos7DYolIUXRwSigTtbSN1zEji5TMSp_5b-GQeowi491fCAMarcoVYunPhCfqd5-130TA" alt="Eixo de Comando">
+                            </div>
+                            <div class="Titulo">
+                                Eixo de Comando
+                            </div>
+                            <div class="detalhe">
+                                <p>Preço: <span>$65,00</span></p>
+                                <a href="#" onclick="abrirOverlay()">Comprar</a>
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+                <div class="secao">
+                    <h1><center>Óleos</center></h1> 
+                    <div class="Card"> 
+                        <div class="produto">
+                            <div class="imagem">
+                                <img class="produto-imagem" src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRxacElYJpYPKbdySeYq-Ym96zDJ55VPMn4BEdg21RX2O8Ngubt85PKbcvKjf3c_nnBI6uxIH1LqsgHpOzAaD1m8dcZz5-OE0You7CuUf0dhbh8OSIrisZm4Q" alt="Oleo Lubrax">
+                            </div>
+                            <div class="Titulo">
+                                Oleo Lubrax
+                            </div>
+                            <div class="detalhe">
+                                <p>Preço: <span>$20,00</span></p>
+                                <a href="#" onclick="abrirOverlay()">Comprar</a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="Card"> 
+                        <div class="produto">
+                            <div class="imagem">
+                                <img class="produto-imagem" src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQKZGKngMbLCUVZG70v-LgyXRrB4JwUQk9eKYVw5z8V4DRIy-yf7DXWi6vRB0Khb84_eB2XdKQ5EKTPmQApsO8Jpkyu9PO-zqAkCknqlB_4lmPGiNTjADhPBkg" alt="Óleo Havoline">
+                            </div>
+                            <div class="Titulo">
+                                Óleo Havoline
+                            </div>
+                            <div class="detalhe">
+                                <p>Preço: <span>$30,00</span></p>
+                                <a href="#" onclick="abrirOverlay()">Comprar</a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="Card"> 
+                        <div class="produto">
+                            <div class="imagem">
+                                <img class="produto-imagem" src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSa2XpUqiYrXdJ8UJh8isZ3aYAlRNSZcmgClqw8zSH5JyqBaCkiHT14eDBb8Pmbk8ODzSuWQdKSBiGSuMrwPcKLShrgxjSqbYnDo0V5bGT5JHGzaL3se4FBuTw" alt="Óleo Castrol GTX">
+                            </div>
+                            <div class="Titulo">
+                                Óleo Castrol GTX
+                            </div>
+                            <div class="detalhe">
+                                <p>Preço: <span>$25,00</span></p>
+                                <a href="#" onclick="abrirOverlay()">Comprar</a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="Card"> 
+                        <div class="produto">
+                            <div class="imagem">
+                                <img class="produto-imagem" src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQYJGclDQFWM-Y6mXe1K0j-Vcd-9K3gwMBo1TegRGgvu_VmliKf-_lPmt1RPK-rGuKZSEFGzRc1kTdYosuLfCvkaSPlHE3IYwZKrF1G9lAWtAteTRqR-EB5Zrw" alt="Óleo Motul">
+                            </div>
+                            <div class="Titulo">
+                                Óleo Motul
+                            </div>
+                            <div class="detalhe">
+                                <p>Preço: <span>$18,00</span></p>
+                                <a href="#" onclick="abrirOverlay()">Comprar</a>
+                            </div>
+                        </div>
+                    </div>    
+                </div>      
+            </div>
+            <div id="meuOverlay" class="overlay">
+                <div class="conteudo-overlay">
+        <!-- Conteúdo do seu overlay -->
+                    <h2>Informe as suas informações</h2>
+                    <form action="mailto:fulano@gmail.com" method="post" onsubmit="return Pegar()">
+                        <label for="nome">Nome Completo</label>
+                        <input type="text" id="nome" name="nome" required>
+
+                        <label for="telefone">Telefone</label>
+                        <input type="tel" id="telefone" name="telefone" required>
+
+                        <label for="email">Numero do seu cartão</label>
+                        <input type="cartão" id="cartão" name="cartão" required>
+
+                        <label for="data">Data de Entrega</label>
+                        <input type="date" id="data" name="data" required>
+
+                        <label for="hora">Horário de Entrega</label>
+                        <input type="time" id="hora" name="hora" required>
+
+                        <label for="servico">Tipo de Pagamento</label>
+                        <select id="pagamento" name="pagamento" required>
+                            <option value="">Selecione</option>
+                            <option value="troca-oleo">PIX</option>
+                            <option value="revisao">Crédito</option>
+                            <option value="freios">Débito</option>
+                        </select>
+
+                        <button type="submit" class="agend">Comprar</button>
+                    </form>
+                </div>
+            </div>
+            
+        </main>
+
+        <footer class="footer">
+            <address>
+                Site criado para a avaliação de 2CAW. João Pedro Barbosa Lima, Leonardo Costa Cutrim, Isaque da Silva Souto, Gabriel Mil Homens Brandão de Moraes
+            </address>
+        </footer>
+    </div>
+</body>
+</html>
